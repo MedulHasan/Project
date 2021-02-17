@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane2" prefHeight="618.0" prefWidth="573.0" style="-fx-background-color: #149ed1;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="signup.SignupController">
+   <children>
+      <Label layoutX="118.0" layoutY="133.0" text="Create a new account" textFill="#fffafa">
+         <font>
+            <Font name="System Italic" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="firstname" focusColor="WHITE" labelFloat="true" layoutX="61.0" layoutY="233.0" prefHeight="26.0" prefWidth="194.0" promptText="First Name" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="lastname" focusColor="WHITE" labelFloat="true" layoutX="291.0" layoutY="233.0" prefHeight="26.0" prefWidth="194.0" promptText="Last Name" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="confirmpassword" focusColor="WHITE" labelFloat="true" layoutX="291.0" layoutY="386.0" prefHeight="26.0" prefWidth="194.0" promptText="Confirm Password" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="upassword" focusColor="WHITE" labelFloat="true" layoutX="61.0" layoutY="386.0" prefHeight="26.0" prefWidth="194.0" promptText="Password" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXComboBox fx:id="combox" focusColor="WHITE" labelFloat="true" layoutX="291.0" layoutY="321.0" prefHeight="26.0" prefWidth="194.0" unFocusColor="WHITE" />
+      <JFXTextField fx:id="suseremail" focusColor="WHITE" labelFloat="true" layoutX="61.0" layoutY="309.0" prefHeight="39.0" prefWidth="194.0" promptText="User Email" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../login/image/back.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="190.0" layoutY="14.0" text="Blue" textFill="#281d9b">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="14.0" text="Bird" textFill="#9b1d23">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="signup" layoutX="388.0" layoutY="458.0" onAction="#handlesignup" style="-fx-background-color: #083ddb;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblerror1" layoutX="485.0" layoutY="351.0" prefHeight="70.0" prefWidth="29.0" textFill="RED">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblerror" layoutX="255.0" layoutY="286.0" prefHeight="70.0" prefWidth="13.0" textFill="#f50202">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblconfirm" layoutX="115.0" layoutY="556.0" prefHeight="26.0" prefWidth="372.0" textAlignment="CENTER" textFill="#ffffff" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="backbutton" layoutX="47.0" layoutY="14.0" onAction="#handlebackbutton" style="-fx-background-color: #149ed1;" text="Back" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

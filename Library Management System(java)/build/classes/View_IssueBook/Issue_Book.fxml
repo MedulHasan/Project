@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_IssueBook.Issue_BookController">
+   <children>
+      <TableView fx:id="viewtable" prefHeight="349.0" prefWidth="600.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="bid" prefWidth="101.0" text="Book ID" />
+          <TableColumn fx:id="mid" prefWidth="109.0" text="Member ID" />
+            <TableColumn fx:id="issuetime" prefWidth="213.0" text="Issue Time" />
+            <TableColumn fx:id="renewcount" prefWidth="176.0" text="Renew Count" />
+        </columns>
+      </TableView>
+      <Button layoutX="254.0" layoutY="413.0" mnemonicParsing="false" onAction="#View" prefHeight="38.0" prefWidth="99.0" text="View" />
+   </children>
+</AnchorPane>

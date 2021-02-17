@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="745.0" style="-fx-background-color: #1de0bc;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookList.BookListController">
+   <children>
+      <TableView fx:id="tableview" layoutX="139.0" layoutY="84.0" prefHeight="358.0" prefWidth="600.0" AnchorPane.bottomAnchor="131.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+        <columns>
+          <TableColumn fx:id="titlecol" onEditCommit="#onEditChanged" prefWidth="199.0" text="Title" />
+          <TableColumn fx:id="idcol" prefWidth="118.0" text="ID" />
+            <TableColumn fx:id="authorcol" prefWidth="173.0" text="Author" />
+            <TableColumn fx:id="publishercol" minWidth="4.0" prefWidth="252.0" text="Publisher" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#DeleteOption" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <TextField fx:id="tfname" layoutX="14.0" layoutY="459.0" promptText="Title" />
+      <TextField fx:id="tfauthor" layoutX="14.0" layoutY="521.0" promptText="Author" />
+      <TextField fx:id="tfid" layoutX="279.0" layoutY="459.0" promptText="ID" />
+      <TextField fx:id="tfpublisher" layoutX="279.0" layoutY="521.0" promptText="Publisher" />
+      <Button layoutX="541.0" layoutY="458.0" mnemonicParsing="false" onAction="#Showdata" prefHeight="42.0" prefWidth="130.0" style="-fx-background-color: #e01313; -fx-background-radius: 20em;" text="Show" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button layoutX="541.0" layoutY="521.0" mnemonicParsing="false" onAction="#savedata" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #e01313; -fx-background-radius: 20em;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutY="-2.0" prefHeight="86.0" prefWidth="745.0" style="-fx-background-color: #4b9d52;" text="Information Of Add Book In Book Table" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="33.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

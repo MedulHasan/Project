@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane1" prefHeight="509.0" prefWidth="548.0" style="-fx-background-color: #4286f4;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+   <children>
+      <JFXTextField fx:id="txt_email" focusColor="WHITE" labelFloat="true" layoutX="150.0" layoutY="208.0" prefHeight="39.0" prefWidth="233.0" promptText="User Email" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txt_pass" focusColor="#f5f5f5" labelFloat="true" layoutX="150.0" layoutY="288.0" prefHeight="39.0" prefWidth="234.0" promptText="PassCode" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fitHeight="31.0" fitWidth="25.0" layoutX="113.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="112.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/passcode.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnlogin" layoutX="300.0" layoutY="354.0" onAction="#handlelogin" style="-fx-background-color: #2db461;" text="Log In" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="86.0" fitWidth="174.0" layoutX="168.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/login_logo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="189.0" layoutY="129.0" text="Blue" textFill="#281d9b">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="129.0" text="Bird" textFill="#9b1d23">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="signup" layoutX="168.0" layoutY="354.0" onAction="#handlesignup" style="-fx-background-color: #3004f4;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="199.0" layoutY="444.0" onAction="#handleforgetpassword" prefHeight="26.0" prefWidth="135.0" text="Forgot Password?" textFill="WHITE" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblwrongpass" layoutX="142.0" layoutY="413.0" prefHeight="30.0" prefWidth="243.0" textFill="#9a1717">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

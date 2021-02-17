@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="1032.0" style="-fx-background-color: #d4e87a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.system.LibraryController">
+   <children>
+      <BorderPane prefHeight="543.0" prefWidth="649.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#Menu_Close" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Add">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#Add_Book" text="Add Book" />
+                        <MenuItem mnemonicParsing="false" onAction="#Add_Member" text="Add Member" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#View_Book" text="View Book" />
+                        <MenuItem mnemonicParsing="false" onAction="#View_Member" text="View Member" />
+                        <MenuItem mnemonicParsing="false" onAction="#Full_Screen" text="Full Screen" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <right>
+            <VBox prefHeight="633.0" prefWidth="212.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#addBook" prefHeight="116.0" prefWidth="207.0" style="-fx-background-color: #dbd1c0;" text="Add Book">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/icons8-book-64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addMember" prefHeight="116.0" prefWidth="208.0" style="-fx-background-color: #ad9062;" text="Add Member">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Desktop/java%20icon/icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#listBook" prefHeight="116.0" prefWidth="209.0" style="-fx-background-color: #db7a4c;" text="View Books">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/view%20book.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="242.0" mnemonicParsing="false" onAction="#listMember" prefHeight="116.0" prefWidth="209.0" style="-fx-background-color: #71d664;" text="View Members">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/viewmembers.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="126.0" mnemonicParsing="false" onAction="#Issue_Book" prefHeight="116.0" prefWidth="208.0" style="-fx-background-color: #3ac4bf;" text="Issue Book List">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/issubook.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Book Issue">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="-14.0" prefHeight="550.0" prefWidth="747.0" style="-fx-background-color: #627272;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-14.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="162.0" prefWidth="707.0" style="-fx-background-color: #7a6b64;">
+                                       <children>
+                                          <TextField fx:id="bookId" alignment="TOP_LEFT" onAction="#bookidInter" prefHeight="31.0" prefWidth="304.0" promptText="Enter Book ID">
+                                             <font>
+                                                <Font name="FZShuTi" size="23.0" />
+                                             </font>
+                                          </TextField>
+                                          <VBox alignment="CENTER" prefHeight="130.0" prefWidth="409.0">
+                                             <children>
+                                                <Label fx:id="bookname" text="Book Name" textFill="#ede8e8">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="bookauthor" layoutX="149.0" layoutY="58.0" text="Book Author" textFill="#ede8e8">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets top="20.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="144.0" prefWidth="707.0" style="-fx-background-color: #7a6b64;">
+                                       <children>
+                                          <TextField fx:id="memberid" alignment="TOP_LEFT" onAction="#memberInter" prefHeight="31.0" prefWidth="304.0" promptText="Enter Member ID">
+                                             <font>
+                                                <Font name="FZShuTi" size="23.0" />
+                                             </font>
+                                          </TextField>
+                                          <VBox alignment="CENTER" prefHeight="130.0" prefWidth="409.0">
+                                             <children>
+                                                <Label fx:id="memName" text="Member Name" textFill="#ede8e8">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="contact" layoutX="149.0" layoutY="58.0" text="Contact Info" textFill="#ede8e8">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets top="20.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="154.0" prefWidth="707.0" style="-fx-background-color: #7a6b64;">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <JFXButton onAction="#IssueBook" style="-fx-background-radius: 20em; -fx-background-color: Green;" text="Issue Book" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="23.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Renew/Submission Book">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="102.0" layoutY="46.0" prefHeight="550.0" prefWidth="747.0" style="-fx-background-color: #627272;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <TextField fx:id="bookid" onAction="#loadInfo" prefHeight="43.0" prefWidth="507.0" promptText="Enter Book ID" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets bottom="30.0" left="120.0" right="120.0" top="30.0" />
+                                       </BorderPane.margin>
+                                       <font>
+                                          <Font name="Franklin Gothic Demi" size="15.0" />
+                                       </font>
+                                    </TextField>
+                                 </top>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton onAction="#Renew_Book" style="-fx-background-color: blue; -fx-background-radius: 20em;" text="Renew" textFill="WHITE">
+                                             <font>
+                                                <Font name="FZShuTi" size="28.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton layoutX="352.0" layoutY="45.0" onAction="#Submission_Book" style="-fx-background-color: blue; -fx-background-radius: 20em;" text="Submission" textFill="WHITE">
+                                             <font>
+                                                <Font name="FZShuTi" size="28.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                                 <center>
+                                    <ListView fx:id="listview" prefHeight="362.0" prefWidth="820.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
